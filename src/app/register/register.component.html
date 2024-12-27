@@ -1,0 +1,38 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="input-main-wrapper container" autocomplete="off">
+    <span class="register-text">Cadastro</span>
+    <div class="input-container">
+        <div>
+            <input class="register-input" placeholder="nome" formControlName="name" autocomplete="off"
+                spellcheck="false" />
+            @if(registerForm.get('name')?.invalid && registerForm.get('name')?.touched){
+            <div class="error">
+                O nome é obrigatório
+            </div>
+            }
+        </div>
+        <div>
+            <input class="register-input" placeholder="email" formControlName="email" autocomplete="off"
+                spellcheck="false" />
+            @if(registerForm.get('email')?.invalid && registerForm.get('email')?.touched){
+            <div class="error">
+                Email válido é obrigatório.
+            </div>
+            }
+        </div>
+        <div>
+            <input class="register-input" type="password" placeholder="senha" formControlName="password"
+                autocomplete="off" spellcheck="false" />
+            @if(registerForm.get('password')?.invalid && registerForm.get('password')?.touched){
+            <div class="error">
+                A senha deve ter pelo menos 6 caracteres.
+            </div>
+            }
+        </div>
+    </div>
+    <div class="account-text">
+        <span>Já tem uma conta?</span>
+    </div>
+    <button class="start-btns" type="submit">
+        Concluir
+    </button>
+</form>

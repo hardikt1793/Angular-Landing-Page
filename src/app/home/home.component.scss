@@ -1,0 +1,27 @@
+// Main Wrapper
+.main-container {
+  position: relative;
+  height: 1040px;
+  background: url(../../assets/images/header.svg) no-repeat bottom;
+}
+
+@media (min-width: 767px) and (max-width: 1200px) {
+  .main-container {
+    height: 850px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-container {
+    background: url(../../assets/images/mobile-header.svg) no-repeat;
+    height: 580px;
+    background-size: 100%;
+    background-position: bottom;
+  }
+}
+
+@media (max-width: 360px) {
+  .main-container {
+    background-size: auto;
+  }
+}
