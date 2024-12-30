@@ -26,6 +26,7 @@
         position: absolute;
         content: "|";
       }
+
       &:last-child:after {
         content: "";
       }
